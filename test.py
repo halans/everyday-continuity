@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Zero-dependency content/build contract checks; browser tests documented separately."""
+import hashlib
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -129,6 +130,31 @@ class Contracts(unittest.TestCase):
         g={n['@type']:n for n in self._ld()['@graph']}
         self.assertEqual(g['WebSite']['sameAs'],[url])
         self.assertIn(url,(PUBLIC/'llms.txt').read_text())
+
+    # ---- hosting: 404 page, security headers, hash handling ----
+    def test_26_malformed_hash_cannot_throw(self):
+        self.assertNotIn('querySelector(location.hash)',H)
+        self.assertIn('decodeURIComponent(location.hash',H); self.assertIn('document.getElementById(id)',H)
+    def test_27_404_page(self):
+        n=(PUBLIC/'404.html').read_text()
+        self.assertIn('name="robots" content="noindex"',n); self.assertIn('<title>Page not found',n)
+        self.assertNotRegex(n,r'<script'); self.assertNotRegex(n,r'(src|href)="https?://')
+        self.assertNotIn('__ICON_LINK__',n); self.assertIn('href="/"',n); self.assertNotIn('canonical',n)
+        self.assertNotIn('404.html',(PUBLIC/'sitemap.xml').read_text())
+    def test_28_headers_cover_every_inline_script_and_style(self):
+        import base64
+        hd=(PUBLIC/'_headers').read_text()
+        csp=re.search(r'Content-Security-Policy: (.*)',hd).group(1)
+        def h(x): return "'sha256-%s'"%base64.b64encode(hashlib.sha256(x.encode('utf-8')).digest()).decode()
+        for name in ('index.html','404.html'):
+            page=(PUBLIC/name).read_text()
+            for m in re.findall(r'<script>(.*?)</script>',page,re.S): self.assertIn(h(m),csp,name)
+            for m in re.findall(r'<style>(.*?)</style>',page,re.S): self.assertIn(h(m),csp,name)
+        for need in ["default-src 'none'","frame-ancestors 'none'","object-src 'none'","base-uri 'none'","form-action 'none'","style-src-attr 'unsafe-inline'"]: self.assertIn(need,csp)
+        self.assertNotIn('unsafe-eval',csp)
+        self.assertNotRegex(re.sub(r"style-src-attr 'unsafe-inline'","",csp),r"unsafe-inline")
+        for hdr in ('X-Content-Type-Options: nosniff','Referrer-Policy: no-referrer','Permissions-Policy:','Strict-Transport-Security:'): self.assertIn(hdr,hd)
+        self.assertLess(max(len(l) for l in hd.splitlines()),2000)
 
     def test_17_rebuild_reproducible(self):
         before={f.name:f.read_bytes() for f in PUBLIC.iterdir()};subprocess.run(['python3',str(ROOT/'build.py')],check=True,capture_output=True);self.assertEqual(before,{f.name:f.read_bytes() for f in PUBLIC.iterdir()})

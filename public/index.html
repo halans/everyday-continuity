@@ -301,7 +301,7 @@ const categories={policy:['defence','inquiry','framework'],household:['qld','nsw
 $('source-grid').innerHTML=DATA.sources.map((s,i)=>'<article class="source-card reveal" id="source-'+s.id+'" data-source="'+s.id+'"><div class="org">'+esc(s.org)+'</div><h3>'+esc(s.title)+'</h3><span class="scope-tag">'+esc(s.scope)+'</span><p>'+esc(s.note)+'</p><a class="visit" href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">Read official source ↗</a></article>').join('');
 function filterSources(){const value=$('source-filter').value;let n=0;document.querySelectorAll('[data-source]').forEach(el=>{el.hidden=value!=='all'&&!categories[value].includes(el.dataset.source);if(!el.hidden)n++;});$('source-count').textContent=n+' official sources';}
 $('source-filter').addEventListener('change',filterSources);
-function showLinkedSource(){if(location.hash.startsWith('#source-')){$('source-filter').value='all';filterSources();const target=document.querySelector(location.hash);if(target)requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}}
+function showLinkedSource(){let id='';try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}if(id.indexOf('source-')!==0)return;const target=document.getElementById(id);if(!target)return;$('source-filter').value='all';filterSources();requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}
 window.addEventListener('hashchange',showLinkedSource);progress();calculate();filterSources();showLinkedSource();
 (function(){
 const root=document.documentElement;
