@@ -6,7 +6,7 @@
 
 ## Published render
 
-Hyperagent artifact cmvte97t10gx507ad22rvzcmj, version 1. CheckWebpageHealth returned healthy, no console errors and no failed requests. Desktop hero screenshot visually inspected at 1280px: clear typography and spacing, no overlap/clipping.
+Published preview, version 1. A page-health check returned healthy, no console errors and no failed requests. Desktop hero screenshot visually inspected at 1280px: clear typography and spacing, no overlap/clipping.
 
 ## Interactive browser
 
@@ -34,7 +34,7 @@ Calculator settings and tasks were reset to defaults after tests.
 
 ## Responsive browser layout
 
-Real browser nested browsing contexts were created at widths 320, 390, 768 and 1280px, height 844px. Because artifact sandbox origins prevent direct iframe DOM access, each context reported its own geometry using postMessage. All widths passed:
+Real browser nested browsing contexts were created at widths 320, 390, 768 and 1280px, height 844px. Because the preview sandbox's origins prevent direct iframe DOM access, each context reported its own geometry using postMessage. All widths passed:
 
 | Context width | Document scroll width | Horizontal overflow | All six nav links inside bounds | Tasks | Tabs |
 |---|---:|---|---|---:|---:|
@@ -47,7 +47,7 @@ Mobile screenshot capture of the nested context returned blank and was not treat
 
 ## Known environmental limits
 
-The sandboxed artifact preview blocked localStorage. The fallback notice rendered correctly and interactions remained functional. Persistent-storage behaviour on a separately hosted first-party origin was not verified in this preview.
+The sandboxed preview blocked localStorage. The fallback notice rendered correctly and interactions remained functional. Persistent-storage behaviour on a separately hosted first-party origin was not verified in this preview.
 
 An attempt to install a local browser testing package was blocked by registry access (403); no dependency was added to the project. Existing browser tools were used instead.
 
@@ -55,6 +55,6 @@ Print stylesheet inspected in source; no physical paper print made. Download tex
 
 ## Branding revision — 31 October 2026
 
-Existing artifact updated in place to version 2: Everyday Continuity. All 18 build/content tests passed (including a new branding consistency test). Render health check healthy with no console errors or failed requests. Desktop screenshot visually inspected: revised masthead, teal-blue palette, headline and navigation fit without overlap.
+Preview updated in place to version 2: Everyday Continuity. All 18 build/content tests passed (including a new branding consistency test). Render health check healthy with no console errors or failed requests. Desktop screenshot visually inspected: revised masthead, teal-blue palette, headline and navigation fit without overlap.
 
 Real browser responsive-context checks at 320, 390, 768 and 1280px all passed: no horizontal overflow, all navigation links inside bounds, revised brand inside bounds. Browser assertions confirmed the old visible name is absent, the text worksheet has the new brand and all 18 planning tasks remain. Source review date deliberately remains 29 October 2026; this was not a source-refresh task.

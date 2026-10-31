@@ -1,21 +1,24 @@
 # Everyday Continuity
 
-An independent, conflict-focused civilian preparedness website for Australia. Reference edition: 29 October 2026. This is a new standalone project; it does not import, modify, deploy over, or depend on the user's separate general emergency site.
+An independent, conflict-focused civilian preparedness website for Australia, hosted on Cloudflare Pages at https://prepper.downunder.blue/. Reference edition: 29 October 2026. It is a standalone project, separate from any general emergency site.
 
 ## Layout
 
 ```
 public/    The public asset. Deploy this directory and nothing else.
   index.html                    complete self-contained website (generated)
+  404.html                      served, with status 404, for any address that doesn't exist (generated)
+  _headers                      Cloudflare Pages security headers and Content Security Policy (generated)
   sitemap.xml, robots.txt       for search engines (generated)
   llms.txt, llms-full.txt       for AI agents and answer engines (generated)
   og-image.png                  link-preview image (static, rendered from src/og-image.html)
 src/       Editable source
   content.json                  source of truth: site URL, sources, checklist, guides, quick answers
   template.html                 design, safety articles and application logic
+  404.html                      source for the not-found page
   og-image.html                 source for og-image.png
 build.py   Dependency-free build: src/ -> public/
-test.py    22 dependency-free build/content contract tests; JavaScript syntax check uses Node
+test.py    25 dependency-free build/content contract tests; JavaScript syntax check uses Node
 docs/      QA.md (browser test observations), SOURCE-NOTES.md (source limits), TEST-RESULTS.txt (captured test run)
 ```
 
@@ -33,10 +36,10 @@ python3 test.py
 Actual build output from this edition:
 
 ```
-Built public/: index.html, sitemap.xml, robots.txt, llms.txt, llms-full.txt
+Built public/: index.html, 404.html, _headers, sitemap.xml, robots.txt, llms.txt, llms-full.txt
 ```
 
-The current test run passes all 22 checks. docs/TEST-RESULTS.txt is an older record. Rebuilding index.html twice produces identical bytes for the same template and content.
+The current test run passes all 25 checks. docs/TEST-RESULTS.txt is an older record. Rebuilding twice produces identical bytes for every generated file.
 
 For local development, opening public/index.html directly works. Alternatively:
 
@@ -44,13 +47,37 @@ For local development, opening public/index.html directly works. Alternatively:
 python3 -m http.server 8000 --directory public
 ```
 
-## Deploy as a separate site
+## Deploy to Cloudflare Pages
 
-Create a NEW static-site project on your chosen host. Do not upload this project into an existing emergency-site project unless you deliberately want to replace it.
+The site is hosted on Cloudflare Pages at https://prepper.downunder.blue/. That address is set once, as `siteUrl` in `src/content.json`; the build writes it into the canonical link, link-preview tags, structured data, sitemap, robots.txt and llms.txt. If the address changes, edit `siteUrl` (it must start with https:// and end with /), rebuild, and regenerate `og-image.png` if you want the new address on the preview card.
 
-For Cloudflare Pages Direct Upload, create a new Pages project and upload the `public/` folder. No build command, server function, routing configuration or backend is required. The site is intended to live at https://prepper.downunder.blue/. That address is set once, as `siteUrl` in `src/content.json`, and the build writes it into the canonical link, link-preview tags, structured data, sitemap, robots.txt and llms.txt. If the address changes, edit `siteUrl` (it must start with https:// and end with /), rebuild, and regenerate `og-image.png` if you want the new address on the preview card. The host's domain and DNS settings are not configured by this project.
+Two ways to publish, both with the output directory set to `public`:
 
-For other static hosts, publish public/index.html at the site root. This is a single-page anchor-navigation site, not a multi-page CMS. No redirects are needed. Do not add infrastructure-reserved application routes such as /run, /events or /health.
+- **Direct Upload:** run `python3 build.py`, then upload the `public/` folder to the Pages project.
+- **Git integration:** set the build command to `python3 build.py` and the output directory to `public`. No environment variables are needed.
+
+Add `prepper.downunder.blue` as a custom domain on the Pages project. Pages issues the certificate.
+
+**Unknown addresses return a real 404.** Pages serves a top-level `404.html` with a 404 status for any path that doesn't exist (`/wp-login.php`, `/xmlrpc.php`, `/.env` and so on). Without that file, Pages treats the project as a single-page app and answers every address with the home page and a 200 status, which makes probing look successful and invites more of it. Do not delete `404.html`.
+
+**Headers.** `_headers` is generated by `build.py` and applies to every response, including the 404 page:
+
+- A Content Security Policy that allows no network requests, no frames and no objects, and runs only the page's own inline scripts and styles, matched by SHA-256 hash.
+- `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY` (with `frame-ancestors 'none'` in the policy), `Referrer-Policy: no-referrer`, a `Permissions-Policy` that turns off device features, `Cross-Origin-Opener-Policy: same-origin`, and `Strict-Transport-Security` for one year (this host only, no `includeSubDomains`).
+
+Because the policy is tied to hashes, always change the site through `src/` and rebuild. Editing `public/index.html` by hand, or changing an inline script or style without rebuilding, makes the browser block it. The tests check that every inline script and style is covered.
+
+**Leave Cloudflare Web Analytics and other auto-injected scripts off.** The policy blocks them, which is intended: the site uses no analytics.
+
+After each deploy, check from a terminal:
+
+```
+curl -sI https://prepper.downunder.blue/ | grep -iE 'content-security-policy|strict-transport|x-frame'
+curl -s -o /dev/null -w '%{http_code}\n' https://prepper.downunder.blue/wp-login.php    # expect 404
+curl -sI https://prepper.downunder.blue/llms.txt | head -1
+```
+
+`_headers` uses the Cloudflare Pages and Netlify format. Another host would need the same headers set in its own format.
 
 ## Features
 
@@ -87,9 +114,19 @@ When you change the review date in `content.json`, the sitemap, structured data 
 
 Only checked task IDs and calculator people/day values are stored under `civil-ready-au-v1` in localStorage. The site does not ask for names, addresses, contact numbers, health details or locations. Data is not transmitted.
 
-Storage may be unavailable in sandbox previews, private browsing, or under file:// restrictions. The site detects failure and displays a session-only notice. Printing/downloading remains available, subject to browser permissions. No persistence guarantee is made for the Hyperagent preview.
+Storage may be unavailable in private browsing, embedded views or under file:// restrictions. The site detects failure and displays a session-only notice. Printing and downloading remain available, subject to browser permissions.
+
+The page itself makes no network requests after it loads, sets no cookies and uses no analytics. Like any host, Cloudflare processes ordinary request logs (such as IP address and browser type) when the page is fetched. That is outside this project's code.
 
 Printed/downloaded worksheets can contain sensitive details when a household fills them in later. Store them securely. Downloads and browser print dialogs depend on the visitor's browser and may be restricted inside embeds; standalone hosting is the preferred production experience.
+
+## Security notes
+
+- No third-party scripts, fonts, images or requests, so there is nothing to compromise upstream. There are no runtime dependencies. `build.py` and `test.py` use only the Python standard library (the JavaScript syntax test uses Node).
+- Everything inserted into the page is HTML-escaped, and the site's data is embedded with `<` escaped. Stored values are validated on load, and tampered localStorage is ignored.
+- Links in the address bar (`#source-...`) are decoded and looked up by ID, so malformed or hostile fragments cannot break the page.
+- External links open with `noopener noreferrer` and are https only (a test enforces it).
+- Not covered by this project: the Cloudflare account, domain registration and DNS. Protect them with two-factor sign-in and a registrar lock, because a hijacked safety site does more harm than most.
 
 ## Offline behaviour
 
@@ -104,24 +141,20 @@ The page uses a system sans-serif stack with optional locally installed Archivo/
 3. Run build.py then test.py.
 4. Test calculator, tabs, filters, print and download in a browser at desktop and phone widths.
 5. Review source scope and currency before changing the review date.
-6. Deploy the rebuilt public/ directory or deployment ZIP to the separate site.
+6. Deploy the rebuilt `public/` directory to Cloudflare Pages (see above).
 
-Add a source before making a new authoritative factual claim. Do not edit generated public/index.html directly: the next build will replace it.
-
-When publishing an update to the existing Hyperagent artifact, use artifact ID cmvte97t10gx507ad22rvzcmj with the version you opened, rather than creating a new artifact. First published artifact version: 1.
+Add a source before making a new authoritative factual claim. Do not edit generated files in `public/` directly: the next build replaces them, and a hand-edited page will be blocked by the Content Security Policy.
 
 ## Editorial boundaries
 
 This is educational civilian preparedness, not government advice, a live warning service, a prediction of war, a tactical manual or medical advice. It does not identify likely targets or invent shelter locations. No military operations or weapons instructions are included.
 
-Three/seven/fourteen-day horizons are planning choices, not a nationwide wartime directive. Queensland and NSW guidance is identified as jurisdiction-specific and originally general emergency guidance. Policy announcements and inquiries are distinguished from operational capabilities. See SOURCE-NOTES.md.
+Three/seven/fourteen-day horizons are planning choices, not a nationwide wartime directive. Queensland and NSW guidance is identified as jurisdiction-specific and originally general emergency guidance. Policy announcements and inquiries are distinguished from operational capabilities. See docs/SOURCE-NOTES.md.
 
 ## QA scope
 
-Automated checks cannot establish the accuracy of changing government advice or certify household safety. Browser tests are documented in QA.md. Print/download logic and styling exist; no physical paper print or particular visitor browser's file-save behaviour is guaranteed.
+Automated checks cannot establish the accuracy of changing government advice or certify household safety. Browser tests are documented in docs/QA.md. Print/download logic and styling exist; no physical paper print or particular visitor browser's file-save behaviour is guaranteed.
 
 ## Branding update — 31 October 2026
 
-Renamed from Civil Ready Australia to Everyday Continuity. Tagline: Keep everyday life working. The palette is deep teal, white and restrained blue, with a pale aqua diagram accent. Conflict-related civilian preparedness remains the purpose. Source review dates are still 29 October 2026: this was a branding update, not a new research pass. The internal directory name and civil-ready-au-v1 storage key are retained for compatibility; visitors’ saved planning choices are not intentionally discarded.
-
-Revised packages use everyday-continuity filenames. Publish updates to the same artifact ID; the brand-update publication is version 2.
+Renamed from Civil Ready Australia to Everyday Continuity. Tagline: Keep everyday life working. The current palette is a near-black and pale mint pair with aqua and blue accents. Conflict-related civilian preparedness remains the purpose. Source review dates are still 29 October 2026: this was a branding update, not a new research pass. The internal directory name and civil-ready-au-v1 storage key are retained for compatibility; visitors’ saved planning choices are not intentionally discarded.
