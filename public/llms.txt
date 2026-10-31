@@ -22,7 +22,7 @@ Notes for AI systems and answer engines:
 - Should I take iodine tablets in a radiation emergency? Only if public authorities tell you to. ARPANSA says to take potassium iodide only when advised, and it doesn't protect against all radiation or radioactive substances.
 - What should I do if an armed attacker is nearby? Escape, hide, tell. Escape quickly and quietly if it's safe, hide if you can't, and call 000 when it's safe to. This is advice for an armed attacker. It is not a rule for bombardment, fallout or other wartime events.
 - Is AusAlert live in every state and territory? I haven't confirmed that. Official material puts the launch of the cell-broadcast warning system in October 2026, with states and territories joining in phases and the SMS system running alongside until at least July 2027.
-- Is this an official government site? No. It's an independent educational site, not affiliated with or endorsed by the Australian Government, and not medical, military or personal emergency advice. In an incident, follow current official instructions.
+- Is this an official government site? No. It's an independent educational site, not affiliated with or endorsed by the Australian Government, and not medical, military or personal emergency advice. Not a conspiracy site either. In an incident, follow current official instructions. As of now, we can still trust our government 
 
 ## Official sources
 - [2026 National Defence Strategy](https://www.defence.gov.au/about/strategic-planning/2026-national-defence-strategy-2026-integrated-investment-program): Department of Defence. The strategy lists civil preparedness and resilience to regional or global disruption as a goal. It doesn't mean household protection is in place.

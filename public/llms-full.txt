@@ -62,9 +62,9 @@ Keep in mind: Cash is a backup and shops may be closed or unable to trade. Buyin
 
 ### Cyber & false information: Protect your accounts and check what you read.
 A crisis brings fake alerts, phishing and doctored images. You can't control the bigger disruption, but you can control your own accounts.
-1. Turn on multi-factor authentication and keep your devices updated. Start with email and banking.
+1. Turn on multi-factor authentication (MFA/2FA) and keep your devices updated. Start with email and banking.
 2. Never share a login code or approve a sign-in you didn't start.
-3. Look up an agency's website or phone number yourself. Don't trust contact details in a message you didn't ask for.
+3. Look up an agency's website or phone number yourself. Don't click any provided links. Don't trust contact details in a message you didn't ask for.
 4. Before you share something, check the original source, the date, the place and whether anyone else confirms it. A real video from years ago can still mislead.
 Keep in mind: Don't forward rumours about attacks, evacuations or shortages. This site is not a live intelligence or warning feed.
 
@@ -107,7 +107,7 @@ I haven't confirmed that. Official material puts the launch of the cell-broadcas
 Sources: National Emergency Management Agency, Minister for Emergency Management / NEMA
 
 ### Is this an official government site?
-No. It's an independent educational site, not affiliated with or endorsed by the Australian Government, and not medical, military or personal emergency advice. In an incident, follow current official instructions.
+No. It's an independent educational site, not affiliated with or endorsed by the Australian Government, and not medical, military or personal emergency advice. Not a conspiracy site either. In an incident, follow current official instructions. As of now, we can still trust our government 
 
 ## Immediate safety
 Immediate danger: call 000 when safe.
