@@ -1,0 +1,218 @@
+# Everyday Continuity
+
+> Independent Australian guide to household preparedness for conflict-related disruption. Written 29 October 2026.
+Site: https://prepper.downunder.blue/
+
+Not a government service, live warning feed, war forecast or individual medical advice. During an incident, current official instructions take priority.
+Three days is a planning starting point, not an Australian wartime requirement.
+
+## Household checklist
+
+### People and the plan
+- Write down key phone numbers on paper, including a relative or friend outside your area. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+- Agree where to meet if phones go down, and who checks on the kids and on anyone who needs support. (my suggestion, no source)
+- Pick somewhere else you could stay and work out how you'd get there. Check the official instructions for the incident before you set off. (my suggestion, no source)
+- Sort out transport, food, ID and care for pets and assistance animals. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+
+### Essential supplies
+- Store drinking water: at least 3 litres per person per day (NSW RFS), plus extra for cooking, washing and pets. (source: NSW Rural Fire Service, https://www.rfs.nsw.gov.au/plan-and-prepare/prepare-your-family/emergency-survival-kit)
+- Keep a food stock you rotate through, including food that needs no cooking or fridge. (source: Queensland Government, https://www.getready.qld.gov.au/prepare/kit)
+- Keep a first aid kit, hygiene items, rubbish bags and infant supplies if you have a baby. (source: Queensland Government, https://www.getready.qld.gov.au/prepare/kit)
+- Keep torches, spare batteries, blankets and warm clothes where you can find them in the dark. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+
+### Health and power
+- Check your repeat prescriptions and ask your pharmacist how much spare medicine to hold. NSW SES suggests five days and Queensland a week. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+- Write down your medication doses, and work out how you'd transport or store medicines that need to stay cool. (source: Healthdirect Australia, https://www.healthdirect.gov.au/floods-and-cyclones)
+- If you rely on electricity for medical equipment, register with your electricity provider and agree a backup plan with your clinical team. (source: Australian Energy Regulator / Energy Made Easy, https://www.energymadeeasy.gov.au/hot-topics/life-support-equipment--be-prepared-and-make-a-plan)
+- Keep power banks charged. If you use a medical battery, check it actually suits the equipment. (source: Australian Energy Regulator / Energy Made Easy, https://www.energymadeeasy.gov.au/hot-topics/life-support-equipment--be-prepared-and-make-a-plan)
+
+### Information, cash and paperwork
+- Keep a battery radio, plus local frequencies and emergency agency details written down. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+- Turn on multi-factor authentication for email, banking and any other account that matters. (source: Australian Signals Directorate, https://www.cyber.gov.au/protect-yourself/resources-protect-yourself/personal-cyber-security-guides/protect-yourself-multi-factor-authentication)
+- Set aside some cash for essentials, as much as your budget allows. Shops may not be able to take it. (source: Reserve Bank of Australia, https://www.rba.gov.au/publications/bulletin/2025/jan/access-to-cash-in-australia.html)
+- Keep secure copies of your ID, Medicare details, insurance, prescriptions and key contacts. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+- Pack a grab bag, with a short list of last-minute items such as daily medicines and devices. (source: NSW State Emergency Service, https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit)
+- Check supplies, expiry dates and the plan itself at least twice a year. (source: Queensland Government, https://www.getready.qld.gov.au/prepare/kit)
+
+## Guides for when a service goes down
+
+### Power & communications: Keep information and essential equipment working.
+A cyber attack or a wider conflict could knock out power or phones with nothing happening near you. Whatever the cause, the basic outage safety is the same.
+1. Use torches and a battery radio. Save your phone battery and keep contact details on paper.
+2. Start your medical backup plan early. Registering for life support doesn't guarantee your power stays on.
+3. Run generators outdoors only, in open air and away from doors, windows and vents. Never in a house or garage.
+4. If the house becomes unsafe because of heat, cold or medical needs, follow official directions and go to your backup place if you can get there safely.
+Keep in mind: A phone power bank can't stand in for a proper medical backup supply. Never improvise indoor heating that burns fuel.
+
+### Water & sanitation: Follow the notice and don't guess the treatment.
+Losing power can stop pumps, treatment plants and sewerage. Deliberate contamination and an ordinary outage call for different responses.
+1. Keep drinking water stored, and set water aside separately for cooking, washing, pets and medical needs.
+2. Read your water supplier's notice properly. A boil water notice and a do not drink notice mean different things.
+3. Boil water when the notice says to. Boiling doesn't make chemical or radiological contamination safe.
+4. If sewerage fails, check local instructions on toilets. Keep hygiene supplies within reach.
+Keep in mind: A household filter or boiling won't remove every contaminant. Don't use water the authorities have told you not to drink.
+
+### Food, payments & fuel: Buy a little extra, not a trolley-load.
+Shipping problems, payment failures and late deliveries can reach households far from a conflict. I'm describing what's possible, not forecasting shortages.
+1. Build up your usual pantry stock bit by bit and rotate it. Include food that needs no cooking.
+2. Keep some cash and, if you can, more than one way to pay. The RBA doesn't set a household cash target.
+3. Keep your vehicle ready for whatever your travel or evacuation plan needs. Follow fuel safety rules. This guide doesn't recommend improvised fuel stockpiles.
+4. Watch for official notices about supply limits or help. Plan for baby, dietary and pet needs instead of buying everything.
+Keep in mind: Cash is a backup and shops may be closed or unable to trade. Buying more than you need can make shortages worse for everyone else.
+
+### Cyber & false information: Protect your accounts and check what you read.
+A crisis brings fake alerts, phishing and doctored images. You can't control the bigger disruption, but you can control your own accounts.
+1. Turn on multi-factor authentication and keep your devices updated. Start with email and banking.
+2. Never share a login code or approve a sign-in you didn't start.
+3. Look up an agency's website or phone number yourself. Don't trust contact details in a message you didn't ask for.
+4. Before you share something, check the original source, the date, the place and whether anyone else confirms it. A real video from years ago can still mislead.
+Keep in mind: Don't forward rumours about attacks, evacuations or shortages. This site is not a live intelligence or warning feed.
+
+### Family overseas: Follow local advice. Don't count on being evacuated.
+Conflict can close routes and cut off consular help. Australians overseas need advice for where they are, and it can differ from what applies here.
+1. Read Smartraveller's advice for the destination and subscribe to updates.
+2. Keep travel documents valid and store copies separately. Passport rules differ by destination and transit country.
+3. Agree how and when you'll check in with family, and keep insurer and consular numbers written down.
+4. Follow local authorities and DFAT advice. Don't assume the Australian Government can arrange your travel or evacuate you.
+Keep in mind: Shelter instructions from another country aren't Australian policy. Don't travel into danger to reach a consular office without checking the advice first.
+
+## Quick answers
+
+### How much water do I need per person per day?
+At least 3 litres of drinking water per person per day, according to the NSW Rural Fire Service. Add water for cooking, washing and pets. Queensland's guidance is at least 10 litres per person for a three-day kit.
+Sources: NSW Rural Fire Service, Queensland Government
+
+### How many days of supplies should I plan for?
+Start with three days, then build up. Queensland's kit is for three days, and NSW Health's pantry guide goes up to 14 days at home. The three, seven and 14 day lengths on this site are my planning choices, not an Australian wartime requirement.
+Sources: Queensland Government, NSW Health
+
+### How much medicine should I keep at home?
+Ask your pharmacist. NSW SES suggests five days of medicines in an emergency kit and Queensland's checklist suggests a week. If you rely on electricity for medical equipment, register with your electricity provider and agree a backup plan with your clinical team.
+Sources: NSW State Emergency Service, Queensland Government, Australian Energy Regulator / Energy Made Easy
+
+### Does Australia have a public list of bomb or fallout shelters?
+I couldn't find one. In the sources I read, there is no designated national blast or fallout shelter network. That says what I could find, not that none exist. A basement or underground car park isn't automatically a suitable shelter.
+Sources: Department of the Prime Minister and Cabinet, ARPANSA
+
+### Should I take iodine tablets in a radiation emergency?
+Only if public authorities tell you to. ARPANSA says to take potassium iodide only when advised, and it doesn't protect against all radiation or radioactive substances.
+Sources: ARPANSA, ARPANSA
+
+### What should I do if an armed attacker is nearby?
+Escape, hide, tell. Escape quickly and quietly if it's safe, hide if you can't, and call 000 when it's safe to. This is advice for an armed attacker. It is not a rule for bombardment, fallout or other wartime events.
+Sources: Australian National Security
+
+### Is AusAlert live in every state and territory?
+I haven't confirmed that. Official material puts the launch of the cell-broadcast warning system in October 2026, with states and territories joining in phases and the SMS system running alongside until at least July 2027.
+Sources: National Emergency Management Agency, Minister for Emergency Management / NEMA
+
+### Is this an official government site?
+No. It's an independent educational site, not affiliated with or endorsed by the Australian Government, and not medical, military or personal emergency advice. In an incident, follow current official instructions.
+
+## Immediate safety
+Immediate danger: call 000 when safe.
+Armed attacker: Escape. Hide. Tell. Follow police instructions. This is not an air-attack or fallout procedure.
+Radiological incident: follow official shelter, evacuation and public-health instructions. Do not take iodine unless public authorities advise it.
+No verified national shelter directory is offered here. Ordinary basements and car parks are not automatically designated or suitable shelters.
+
+## Official sources
+
+### Department of Defence: 2026 National Defence Strategy
+https://www.defence.gov.au/about/strategic-planning/2026-national-defence-strategy-2026-integrated-investment-program
+Scope: National policy
+The strategy lists civil preparedness and resilience to regional or global disruption as a goal. It doesn't mean household protection is in place.
+
+### Parliament of Australia: Civil preparedness and resilience inquiry
+https://www.aph.gov.au/About_Parliament/House_of_Representatives/About_the_House_News/Media_Releases/Defence_Committee_to_inquire_into_national_civil_preparedness_and_resilience
+Scope: National policy · August 2026
+Covers how government and essential goods and services, fuel included, keep going in a crisis or conflict. This is the announcement of the inquiry, not an adopted standard.
+
+### Department of the Prime Minister and Cabinet: Australian Government Crisis Management Framework
+https://www.pmc.gov.au/resources/australian-government-crisis-management-framework-agcmf
+Scope: Government arrangements
+September 2026 framework setting out Commonwealth and state and territory responsibilities in a crisis. It's written for government, not as a household manual.
+
+### Queensland Government: Emergency kit
+https://www.getready.qld.gov.au/prepare/kit
+Scope: Queensland · general emergencies
+Three-day kit, at least 10 litres of drinking water per person, and longer supplies if you may be isolated. I use it for the household logistics, not as a wartime requirement.
+
+### NSW State Emergency Service: Put together an emergency kit
+https://www.ses.nsw.gov.au/plan-and-prepare/emergency-kit
+Scope: NSW · general emergencies
+Documents, cash, five days of medicines, medical equipment and a separate list of last-minute items. A general emergency kit, not written for war.
+
+### NSW Rural Fire Service: Emergency survival kit
+https://www.rfs.nsw.gov.au/plan-and-prepare/prepare-your-family/emergency-survival-kit
+Scope: NSW · general emergencies
+At least 3 litres of drinking water per person per day. The calculator uses this figure. It doesn't cover all washing and cooking.
+
+### NSW Health: Preparing for an emergency: pantry guidance
+https://www.health.nsw.gov.au/emergency_preparedness/planning/Pages/emergency-pantry-list.aspx
+Scope: NSW · longer-duration planning
+Suggests stocking a pantry for up to 14 days at home. Long-standing general emergency advice, not a new war warning.
+
+### Australian National Security: What to do in an attack
+https://www.nationalsecurity.gov.au/what-can-i-do/what-to-do-in-an-attack
+Scope: Armed attacker / terrorism
+Escape. Hide. Tell. Call 000 when safe and follow police instructions. Don't apply it to every military or radiological incident.
+
+### ARPANSA: Radiation emergency preparedness and response
+https://www.arpansa.gov.au/research/radiation-emergency-preparedness-and-response
+Scope: Radiological emergencies
+National radiation preparedness, including malicious use of radioactive material. It isn't a list of nuclear shelters.
+
+### ARPANSA: Potassium iodide during a radiological or nuclear emergency
+https://www.arpansa.gov.au/regulation-and-licensing/regulatory-publications/radiation-protection-series/guides-and-recommendations/guide-radiation-protection-emergency-exposure-situations-rps-g-3/advisory-note-rps-g-3-use-potassium-iodide-during-radiological-or-nuclear-emergency
+Scope: Radiological health advice
+Take potassium iodide only when public authorities advise it. It doesn't protect against all radiation or radioactive substances.
+
+### Australian Signals Directorate: Protect yourself with multi-factor authentication
+https://www.cyber.gov.au/protect-yourself/resources-protect-yourself/personal-cyber-security-guides/protect-yourself-multi-factor-authentication
+Scope: Personal cyber security
+Put MFA on email, banking and sensitive accounts first. It lowers the risk and doesn't guarantee security.
+
+### Australian Communications and Media Authority: Online disinformation and misinformation
+https://www.acma.gov.au/online-disinformation-and-misinformation
+Scope: Information verification
+Check sources, dates and whether others confirm a claim before sharing it. The advice is ACMA's. The framing around it is mine.
+
+### Australian Energy Regulator / Energy Made Easy: Life support equipment: be prepared and make a plan
+https://www.energymadeeasy.gov.au/hot-topics/life-support-equipment--be-prepared-and-make-a-plan
+Scope: Medical power continuity
+Register life support needs and make a backup plan with your providers and clinicians. Registration can't prevent every outage.
+
+### Reserve Bank of Australia: Access to cash in Australia
+https://www.rba.gov.au/publications/bulletin/2025/jan/access-to-cash-in-australia.html
+Scope: Payment resilience
+Treats cash as a backup to electronic payments. It doesn't set a household cash amount or guarantee shops will accept it.
+
+### NSW Health: What to do during a boil water alert
+https://www.health.nsw.gov.au/environment/water/Pages/bwa-what-to-do.aspx
+Scope: NSW · boil-water notices
+Follow your water utility's notices. Boiling advice for microbial risks shouldn't be applied to chemical or radiological contamination.
+
+### Healthdirect Australia: Floods and cyclones: health and outage safety
+https://www.healthdirect.gov.au/floods-and-cyclones
+Scope: Transferable outage safety
+Used here for safe medicine transport and outdoor generator use. It was written for floods and cyclones, not war.
+
+### National Emergency Management Agency: AusAlert
+https://www.nema.gov.au/our-work/risk-reduction/ausalert
+Scope: Public warnings
+Cell-broadcast warning system; official rollout material points to October 2026. Don't assume it's live everywhere or that every device is covered.
+
+### Minister for Emergency Management / NEMA: National test and phased adoption of AusAlert
+https://minister.homeaffairs.gov.au/KristyMcBain/Pages/doorstop-national-situation-room-canberra-27072026.aspx
+Scope: 27 July 2026 operational statement
+Describes states and territories adopting AusAlert in phases, with both systems available until at least July 2027. It doesn't confirm a nationwide launch.
+
+### DFAT / Smartraveller: Crisis or emergency overseas
+https://www.smartraveller.gov.au/crisis-emergency
+Scope: Australians overseas
+Follow local authorities and destination advice. Government help doesn't guarantee evacuation, safety or travel arrangements.
+
+### DFAT / Smartraveller: Travel smart
+https://www.smartraveller.gov.au/consular-services/resources/travel-smart
+Scope: Overseas documents and preparation
+Check passport rules for your destination and keep copies separately. Copies don't replace valid travel documents.

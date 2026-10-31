@@ -1,0 +1,23 @@
+test_01_source_ids_unique (__main__.Contracts) ... ok
+test_02_sources_https_and_scoped (__main__.Contracts) ... ok
+test_03_checklist_ids_unique (__main__.Contracts) ... ok
+test_04_source_references_resolve (__main__.Contracts) ... ok
+test_05_embedded_data_matches (__main__.Contracts) ... ok
+test_06_no_build_token (__main__.Contracts) ... ok
+test_07_html_ids_unique (__main__.Contracts) ... ok
+test_08_static_anchors_resolve (__main__.Contracts) ... ok
+test_09_no_runtime_network_dependencies (__main__.Contracts) ... ok
+test_10_js_syntax (__main__.Contracts) ... ok
+test_11_reference_includes_all_sources_and_tasks (__main__.Contracts) ... ok
+test_12_checksums (__main__.Contracts) ... ok
+test_13_deploy_archive (__main__.Contracts) ... ok
+test_14_scope_and_safety_boundaries (__main__.Contracts) ... ok
+test_15_sources_open_safely (__main__.Contracts) ... ok
+test_16_accessibility_hooks (__main__.Contracts) ... ok
+test_17_rebuild_reproducible (__main__.Contracts) ... ok
+test_18_branding_consistent (__main__.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.098s
+
+OK

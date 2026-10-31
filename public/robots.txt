@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prepper.downunder.blue/sitemap.xml
